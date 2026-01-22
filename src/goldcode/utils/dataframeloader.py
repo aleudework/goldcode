@@ -50,8 +50,46 @@ class DataFrameLoader():
 
         except Exception as e:
             self.logger.error(e)
-        
 
-        
+    
+    def load_files_to_df(self, input_folder, exclude_ext = [], exclude_folders = []):
+        """
+        Load filepaths to df
+        """
 
+        try:
 
+            rows = []
+            counter = 0
+
+            for dirpath, dirnames, filenames in os.walk(input_folder):
+
+                # Exclude folders
+                dirnames[:] = [d for d in dirnames if d not in exclude_folders]
+
+                for f in filenames:
+                    ext = os.path.splitext(f)[1]
+
+                    # Exclude ext
+                    if ext in exclude_ext:
+                        continue
+
+                    rows.append({
+                        "filename": f,
+                        "ext": ext,
+                        "path": os.path.join(dirpath, f)
+                    })
+
+                    counter += 1
+
+                    if counter % 5000 == 0:
+                        self.logger.info(f"▶ Found files: {counter}")
+                
+                df = pd.DataFrame(rows)
+
+                self.logger.info(f"✔ Found total {counter} files")
+
+                return df
+
+        except Exception as e:
+            self.logger.error(e)

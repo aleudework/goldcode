@@ -7,3 +7,15 @@ path = '/Users/alhu/Data/Konverteringsdata/Downloadet/BilagsMapping/BilagsMappin
 df = reader.load_df_from_chunks(path)
 
 print(df.info())
+
+print("---------")
+
+
+dfloader = DataFrameLoader()
+
+input_folder = '/Volumes/ALHU APFS/Migrering/Lejerbo Regnskaber/601-0'
+
+df = dfloader.load_files_to_df(input_folder)
+
+print(df.head())
+
