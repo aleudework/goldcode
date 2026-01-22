@@ -1,7 +1,7 @@
 import os
 import pandas
 
-class Loader():
+class DataLoader():
 
     def __init__():
         pass
