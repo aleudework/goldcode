@@ -3,7 +3,7 @@ import pandas as pd
 import logging
 from goldcode.logging.setup import get_logger
 
-class Reader():
+class DataFrameLoader():
 
     def __init__(self, logger = None, log_path = None):
         self.logger = get_logger(
@@ -50,10 +50,8 @@ class Reader():
 
         except Exception as e:
             self.logger.error(e)
+        
 
-
-
-
-                
+        
 
 

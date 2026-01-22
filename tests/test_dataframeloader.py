@@ -1,6 +1,6 @@
-from goldcode.utils.reader import Reader
+from goldcode.utils.dataframeloader import DataFrameLoader
 
-reader = Reader()
+reader = DataFrameLoader()
 
 path = '/Users/alhu/Data/Konverteringsdata/Downloadet/BilagsMapping/BilagsMapping_251231'
 
