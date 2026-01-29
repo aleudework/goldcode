@@ -8,6 +8,8 @@ df = reader.load_df_from_chunks(path)
 
 print(df.info())
 
+df.to_parquet('/Volumes/ALHU APFS/bilagsmapping.parquet', index=False)
+
 print("---------")
 
 
