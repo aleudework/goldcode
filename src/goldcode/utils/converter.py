@@ -5,7 +5,6 @@ class Converter():
         pass
 
 
-
     def flatten(self, paragraphs):
         """
         Tager en 2D med paragraphs og flatten til 1D. Tilføjer en paragraph værdi, som angiver, hvilke paragraph, det hører til.
@@ -25,8 +24,6 @@ class Converter():
 
         return output
             
-
-
 
     def convert_text_to_eg_html(self, flatten_text: list):
         """

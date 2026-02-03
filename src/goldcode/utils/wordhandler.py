@@ -94,8 +94,12 @@ class WordHander():
                     is_italic = bool(run.italic)
                     is_underline = bool(run.underline)
 
+                    # Fjerner hårdt mellemrum / cleaning
+                    cleaned_text = run.text.replace("\xa0", " ")
+
+
                     decoded_run = {
-                        "text": run.text,
+                        "text": cleaned_text,
                         "is_bold": is_bold,
                         "is_italic": is_italic,
                         "is_underline": is_underline,
