@@ -15,3 +15,7 @@ pip install --upgrade git+https://github.com/brugernavn/my_package.git
 # Editor mode (bruges ikke)
 pip install -e git+https://github.com/brugernavn/my_package.git
 
+
+
+# Commit ændringer lokalt:
+pip install -e .

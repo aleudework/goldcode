@@ -23,8 +23,15 @@ class Converter():
                 output.append(value)
 
         return output
-            
+    
+    def linebreaks_adder(self, html):
+        """
+        Tilføjer dobbelt linjeskift hvor der er paragraf
+        """
 
+        return html.replace('</p><p>', '</p><br><br><p>')
+
+            
     def convert_text_to_eg_html(self, flatten_text: list):
         """
         Tager en flatten liste over tekst.
@@ -212,5 +219,3 @@ class Converter():
         
         return html
             
-
-
