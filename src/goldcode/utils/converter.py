@@ -29,7 +29,7 @@ class Converter():
         Tilføjer dobbelt linjeskift hvor der er paragraf
         """
 
-        return html.replace('</p><p>', '</p><br><br><p>')
+        return html.replace('</p><p>', '<br><br>')
 
             
     def convert_text_to_eg_html(self, flatten_text: list):
